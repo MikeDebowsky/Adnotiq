@@ -1,0 +1,277 @@
+/* styles.css */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #000;
+    color: #fff;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Nagłówek */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    background-color: #222;
+}
+
+.header .logo {
+    height: 50px;
+}
+
+.header .nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+}
+
+.header .nav a:hover {
+    color: #bb00ff;
+}
+
+/* Hero Section */
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Ciemny przezroczysty overlay */
+    z-index: 1;
+}
+.hero h1, .hero p, .cta-buttons {
+    position: relative;
+    z-index: 2; /* Aby tekst był nad overlayem */
+}
+
+.hero {
+    text-align: center;
+    padding: 80px 20px;
+    background-image: url('background.png'); /* Ścieżka do pliku graficznego */
+    background-size: cover; /* Obraz dopasowany do całej sekcji */
+    background-position: center; /* Centrowanie obrazu */
+    background-repeat: no-repeat; /* Zapobiega powtarzaniu obrazu */
+    color: #fff; /* Upewnij się, że tekst jest widoczny */
+    position: relative;
+ 
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin: 0;
+}
+
+.hero p {
+    margin-top: 20px;
+    font-size: 1.2rem;
+    color: #ccc; /* Kolor tekstu */
+}
+
+.cta-buttons {
+    margin-top: 30px;
+}
+
+.cta {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #bb00ff;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    margin: 0 10px;
+    transition: background 0.3s;
+}
+
+.cta:hover {
+    background-color: #dd33ff;
+}
+
+.cta.secondary {
+    background-color: transparent;
+    border: 2px solid #bb00ff;
+ border-top: 4px solid #bb00ff;
+}
+
+.cta.secondary:hover {
+    background-color: #bb00ff;
+    color: #fff;
+
+}
+/* Styl dla sekcji Nasze Usługi */
+
+
+.services {
+  .service-grid {  display: grid;
+   
+ padding: 50px 20px;
+    background: linear-gradient(to right, #1a1a1a, #333); /* Gradientowe tło */
+    color: #fff;
+    text-align: center;
+
+  border: 4px solid #bb00ff; /* Neonowa fioletowa ramka */
+    border-radius: 10px; /* Zaokrąglone rogi */
+    box-shadow: 0 0 15px rgba(187, 0, 255, 0.5); /* Opcjonalny delikatny blask */
+}
+
+   
+  
+}
+
+.service-item {
+    background-color: #222;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Tylko cień */
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-align: center;
+}
+
+.service-item:hover {
+    transform: translateY(-10px); /* Animacja na hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5); /* Intensywniejszy cień */
+}
+
+.service-item h3 {
+    margin-bottom: 10px;
+    color: #bb00ff; /* Kolor nagłówków */
+}
+
+.service-item p {
+    color: #ccc;
+    line-height: 1.5;
+}
+
+.service-item img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 15px;
+}
+ {
+    border: 1px solid #444;
+    background: #222;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s;
+}
+
+.service-item:hover {
+    transform: scale(1.05); /* Powiększenie kafelka na hover */
+}
+.service-item
+ {
+
+    background-color: #333;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s, box-shadow 0.3s;
+ padding: 50px 20px;
+    background: linear-gradient(to right, #1a1a1a, #333); /* Gradientowe tło */
+    color: #fff;
+    text-align: center;
+  
+}
+
+.service-item:hover {
+    transform: translateY(-10px); /* Efekt podniesienia */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+}
+
+/* Sekcje */
+.services, .case-studies, .about, .contact {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+h2 {
+    color: #bb00ff;
+    margin-bottom: 20px;
+}
+
+.service-item, .case-study {
+    margin: 20px 0;
+}
+
+.service-item h3, .case-study p {
+    color: #fff;
+}
+
+/* Formularz kontaktowy */
+.contact form {
+container;
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #333;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.contact form input, .contact form textarea {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 3px solid #bb00ff;
+    background-color: #222;
+    color: #fff;
+    border-radius: 5px;
+}
+
+.contact form button {
+    background-color: #bb00ff;
+    color: #fff;
+    font-weight: bold;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.contact form button:hover {
+    background-color: #dd33ff;
+}
+
+/* Stopka */
+/* Stopka */
+.footer {
+    background-color: #222;
+    color: #ccc;
+    padding: 20px 0;
+    text-align: center;
+    border-top: 4px solid #bb00ff;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.footer-logo img {
+    height: 40px; /* Rozmiar logo */
+}
+
+.footer-links {
+    display: flex;
+    gap: 15px;
+}
+
+.footer-links a {
+    color: #bb00ff;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.3s;
+}
+
+.footer-links a:hover {
+    color: #dd33ff;
+}
